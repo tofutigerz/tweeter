@@ -13,13 +13,43 @@ html {
 /*
  * Global layout stuff
  */
+ 
+ body {
+   color: #545149;
+   background-color: #f4f1ec;
+   font-size: 24px;
+   font-family: 'Source Sans Pro', sans-serif;
+  }
+  
 
-body {
-  color: #545149;
+  /*
+  * Additional CSS can be defined below or in other CSS files, as per instructions
+  */
+  
+main {
   background-color: #f4f1ec;
-  font-size: 24px;
+  width: 90%;
+  align-self: center;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 520px;
+  z-index: 0;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+#tweet-text {
+  background-color: #f4f1ec;
+  border: #f4f1ec;
+  border-bottom: #545149 solid;
+  resize: none;
+  width: 100%;
+  height: 1.7em;
+}
+
+.new-tweet {
+  width: 100%;
+}
