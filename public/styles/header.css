@@ -1,5 +1,4 @@
-header {
-  position: absolute;
+.page-header {
   top: 0;
   left: 0;
   width: 100%;
@@ -9,12 +8,11 @@ header {
   justify-content: flex-start;
   align-items: center;
   background-color: antiquewhite;
-  /* margin-top: 120px; */
   background-image: url("../images/cartographer.png");
   z-index: 1;
 }
 
 .profile-pic {
-  padding-top: 120px;
+  padding-top: 150px;
 }
 

@@ -4,7 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 120px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,15 +12,19 @@ nav {
 }
 
 nav span {
-  color: #FFFFFF;
   margin-left: 1.5em;
   margin-right: 1.5em;
+  color: #FFFFFF;
   font-size: 60px;
-  align-self: flex-end;
+  align-self: center;
 }
 
 #nav-arrow {
   color: red;
+}
+
+#nav-arrow:hover {
+  color: black;
 }
 
 #right-nav {
