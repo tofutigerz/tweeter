@@ -105,19 +105,18 @@ $("#submit-tweet").submit(function(event) {
   $.ajax({
     type: "POST",
     url: url,
-    data: sendData
+    data: sendData,
     // success: function() {
     //   // alert(sendData);
     // }
   })
-  .then((tweets) => {
-    // $.ajax({
-    //   type: "GET",
-    //   url: url,
-    //   success: function(tweets) {
+  .then(() => {
+    $.ajax({
+      type: "GET",
+      url: url,
+      success: function(tweets) {
         renderTweets(tweets);
-      // }
-    // })
+      }
+    })
   });
 })
-
