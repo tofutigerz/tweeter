@@ -57,6 +57,9 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" id="submit-tweet">
           <label for="tweet-text">What are you humming about?</label>
+          <p class="submission-error hidden" id="empty-tweet">You can't submit an empty tweet</p>
+          <p class="submission-error hidden" id="long-tweet">Your tweet is too long, please keep it within the character limit</p>
+
           <textarea name="text" id="tweet-text"></textarea>
           <footer class="tweet-footer">
             <button type="submit">Tweet</button>

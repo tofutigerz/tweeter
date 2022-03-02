@@ -27,3 +27,16 @@ button[type="submit"] {
   display: flex;
   justify-content: space-between;
 }
+
+.submission-error {
+  color: red;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}

@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 // Test / driver code (temporary). Eventually will get this from the server.
 // const tweetData = {
 //   "user": {
@@ -43,7 +44,6 @@
 // ]
 
 
-
 const createTweetElement = (tweetData) => {
   const $tweet = $(`
     <article class="tweet">
@@ -53,9 +53,8 @@ const createTweetElement = (tweetData) => {
           <h3>${tweetData.user.name}</h3>
         </div>
         <h3>${tweetData.user.handle}</h3>
-      </header>
-      
-      <p>${tweetData.content.text}</p>
+      </header>      
+      ${$("<p>").text(tweetData.content.text).html()}
       <hr>
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>
@@ -102,13 +101,25 @@ $("#submit-tweet").submit(function(event) {
   let $form = $(this);
   let url = $form.attr("action");
   const sendData = $form.serialize();
+  // alert(sendData);
+  
+  if (sendData.length === 5) {
+    alert("You can't send an empty tweet!");
+    return;
+  }
+  if (sendData.length - 5 > 140) {
+    alert("You have gone over the character limit!");
+    return;
+  } 
+
   $.ajax({
     type: "POST",
     url: url,
     data: sendData,
-    // success: function() {
-    //   // alert(sendData);
-    // }
+    success: function() {
+      // alert(sendData);
+      $("#tweet-text").val('');
+    }
   })
   .then(() => {
     $.ajax({
