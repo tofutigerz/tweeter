@@ -54,7 +54,7 @@ const createTweetElement = (tweetData) => {
         </div>
         <h3>${tweetData.user.handle}</h3>
       </header>      
-      ${$("<p>").text(tweetData.content.text).html()}
+      <p class="tweet-content">${$("<p>").text(tweetData.content.text).html()}</p>
       <hr>
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>

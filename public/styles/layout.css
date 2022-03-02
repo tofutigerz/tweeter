@@ -38,6 +38,21 @@ main {
   z-index: 0;
 }
 
+#scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 15vmin;
+  height: 15vmin;
+  width: 15vmin;
+  font-size: 8vmin;
+}
 
 @media only screen and (min-width: 768px) {
   body {

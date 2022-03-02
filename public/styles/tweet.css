@@ -8,7 +8,8 @@ article.tweet {
   border: solid black;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -22,6 +23,11 @@ article.tweet {
     font-size: 2vw;
   }
 }
+
+.tweet-content {
+  word-wrap: break-word;
+}
+
 
 article.tweet:hover {
   box-shadow: 5px 5px rgb(99, 104, 102)

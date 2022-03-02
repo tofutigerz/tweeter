@@ -52,7 +52,7 @@ nav a, nav a:hover, nav a:focus, nav a:active {
 }
 
 @media only screen and (max-width: 390px) {
-  #right-nav {
+  .right-nav {
     display: none;
   }
   nav {
