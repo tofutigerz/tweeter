@@ -21,7 +21,18 @@ nav span {
 
 #nav-arrow {
   color: red;
+  animation-name: bounce-arrow;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
+
+@keyframes bounce-arrow {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
 
 #nav-arrow:hover {
   color: black;
