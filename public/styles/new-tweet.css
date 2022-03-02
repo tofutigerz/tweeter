@@ -40,7 +40,3 @@ button[type="submit"] {
 .hidden {
   display: none;
 }
-
-.shown {
-  display: block;
-}
