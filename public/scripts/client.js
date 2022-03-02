@@ -115,7 +115,7 @@ $("#submit-tweet").submit(function(event) {
       type: "GET",
       url: url,
       success: function(tweets) {
-        renderTweets(tweets);
+        renderTweets(tweets.slice(-1));
       }
     })
   });
