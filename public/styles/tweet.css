@@ -10,6 +10,19 @@ article.tweet {
   padding-right: 5%;
   margin-top: 50px;
 }
+
+@media only screen and (max-width: 620px) {
+  article.tweet {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  article.tweet {
+    font-size: 2vw;
+  }
+}
+
 article.tweet:hover {
   box-shadow: 5px 5px rgb(99, 104, 102)
 }
