@@ -28,6 +28,10 @@ button[type="submit"] {
   justify-content: space-between;
 }
 
+.counter-error {
+  color: red;
+}
+
 .submission-error {
   color: red;
   font-size: 18px;

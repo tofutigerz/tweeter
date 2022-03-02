@@ -98,17 +98,22 @@ const renderTweets = (tweets) => {
 
 $("#submit-tweet").submit(function(event) {
   event.preventDefault();
+  $("#empty-tweet").removeClass("shown");
+  $("#long-tweet").removeClass("shown");
+
   let $form = $(this);
   let url = $form.attr("action");
   const sendData = $form.serialize();
   // alert(sendData);
   
   if (sendData.length === 5) {
-    alert("You can't send an empty tweet!");
+    // alert("You can't send an empty tweet!");
+    $("#empty-tweet").addClass("shown");
     return;
   }
   if (sendData.length - 5 > 140) {
-    alert("You have gone over the character limit!");
+    // alert("You have gone over the character limit!");
+    $("#long-tweet").addClass("shown");
     return;
   } 
 
