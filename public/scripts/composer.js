@@ -20,9 +20,16 @@ $(document).ready(function() {
     }
   });
   const scrollTop = () => {
-    console.log("vh * 0.3", vh*0.3)
-    $(window).scrollTop(vh);
-    $("#tweet-text").focus();
+    // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    // console.log("scrollheight" , document.body.scrollHeight)
+    const scrollHeight = document.body.scrollHeight;
+    if (vw > 390 || scrollHeight < 2 * vh) {
+      $(window).scrollTop(0);
+      $("#tweet-text").focus();
+    } else {
+      $(window).scrollTop(vh * 2);
+      $("#tweet-text").focus();
+    }
   }
   $scrollButton.on("click", scrollTop);
   $(".right-nav").on("click", scrollTop);
