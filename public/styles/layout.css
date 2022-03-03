@@ -49,9 +49,14 @@ main {
   color: white;
   cursor: pointer;
   border-radius: 15vmin;
-  height: 15vmin;
-  width: 15vmin;
-  font-size: 8vmin;
+  height: 12vmin;
+  width: 12vmin;
+  font-size: 6vmin;
+}
+
+#scroll-top:hover {
+  background-color: white;
+  color: red;
 }
 
 @media only screen and (min-width: 768px) {

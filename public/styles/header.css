@@ -1,6 +1,6 @@
 .page-header {
   width: 100%;
-  height: 520px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,7 +11,7 @@
 }
 
 .profile-pic {
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 @media only screen and (min-width: 768px) {
