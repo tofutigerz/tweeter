@@ -66,3 +66,7 @@ article.tweet div.user-info {
 article.tweet footer i:hover {
   color: #f1bb69;
 }
+
+article.tweet h3 {
+  word-wrap: break-word;
+}

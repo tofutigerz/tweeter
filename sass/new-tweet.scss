@@ -1,5 +1,9 @@
+$primary-background-color: #f4f1ec;
+$logo-font: 'Bungee', cursive;
+$primary-color: #4056a1;
+
 #tweet-text {
-  background-color: #f4f1ec;
+  background-color: $primary-background-color;
   border: none;
   outline: none;
   border-bottom: #545149 solid;
@@ -15,13 +19,13 @@
 }
 
 button[type="submit"] {
-  font-family: 'Bungee', cursive;
+  font-family: $logo-font;
   color: white;
-  background-color: #4056a1;
+  background-color: $primary-color;
 }
 
 .counter {
-  font-family: 'Bungee', cursive;
+  font-family: $logo-font;
 }
 
 .tweet-footer {

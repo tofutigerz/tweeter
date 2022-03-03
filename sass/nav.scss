@@ -1,5 +1,9 @@
+$primary-color: #4056a1;
+$logo-font: 'Bungee', cursive;
+// $secondary-font: ;
+
 nav {
-  font-family: 'Bungee', cursive;
+  font-family: $logo-font;
   display: flex;
   justify-content: space-between;
   height: 120px;
@@ -74,7 +78,7 @@ nav a, nav a:hover, nav a:focus, nav a:active {
 
 @media only screen and (min-width: 768px) {
   nav {
-    background-color: #4056a1;
+    background-color: $logo-font;
     // background-color: #3a8aaa;
     font-size: 31px;
   }
