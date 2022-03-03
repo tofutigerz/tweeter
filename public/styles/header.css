@@ -22,9 +22,9 @@
   }
   .profile-pic {
     padding-top: 17vh;
+    height: 51vh;
   }
 }
-
 
 
 @media only screen and (min-width: 768px) {
