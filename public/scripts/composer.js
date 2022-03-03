@@ -14,6 +14,7 @@ $(document).ready(function() {
     } else {
       $scrollButton.hide();
       if (vw > 390) {
+        // console.log("vw", vw);
         $(".right-nav").show();
       }
 
