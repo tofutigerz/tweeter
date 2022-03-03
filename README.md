@@ -20,4 +20,5 @@ This respository is a student project fork of the Lighthouse Labs starter code.
 ## Demo Pictures
 
 Smart phone (iPhone SE)!["display on iphone SE"](https://github.com/tofutigerz/tweeter/blob/master/docs/iphone_se.png)
+
 Tablet (iPad Air)!["display on iPad Air"](https://github.com/tofutigerz/tweeter/blob/master/docs/ipad_air.png)
