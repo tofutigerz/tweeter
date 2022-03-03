@@ -85,6 +85,13 @@ $(document).ready(function() {
     });
   };
   
+  $.ajax({
+    type: "GET",
+    url: "/tweets",
+    success: function(tweets) {
+      renderTweets(tweets);
+    }
+  })
   // renderTweets(data);
   
   // $(function() {

@@ -66,5 +66,8 @@ main {
 
   main {
     padding-top: 120px;
+    width: 40%;
+    max-width: 40%;
+    min-width: 40%;
   }
 }

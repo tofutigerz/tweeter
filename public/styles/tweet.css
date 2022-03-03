@@ -22,9 +22,14 @@ article.tweet {
   article.tweet {
     font-size: 2vw;
   }
+
+  .tweet-content {
+    width: 100%;
+  }
 }
 .tweet-content {
   word-wrap: break-word;
+  width: 100%;
 }
 
 article.tweet:hover {
