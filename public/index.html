@@ -39,12 +39,10 @@
         tweeter
       </span>
       <span class="right-nav">
-        <!-- <a href="#tweet-text" class="right-nav"> -->
-          <div>
-            <strong>Write</strong> a new tweet 
-          </div>
-          <i class="fa-solid fa-angles-down" id="nav-arrow"></i>
-        <!-- </a> -->
+        <div>
+          <strong>Write</strong> a new tweet 
+        </div>
+        <i class="fa-solid fa-angles-down" id="nav-arrow"></i>
       </span> 
     </nav>
     <header class="page-header">
@@ -54,7 +52,6 @@
       <div>
           <h2>Your Name</h2>
       </div>
-      <!-- <br> -->
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -64,7 +61,6 @@
           <label for="tweet-text">What are you humming about?</label>
           <p class="submission-error hidden" id="empty-tweet">You can't submit an empty tweet</p>
           <p class="submission-error hidden" id="long-tweet">Your tweet is too long, please keep it within the character limit</p>
-
           <textarea name="text" id="tweet-text"></textarea>
           <footer class="tweet-footer">
             <button type="submit">Tweet</button>
@@ -73,34 +69,12 @@
         </form>
       </section>
       <div id="tweets-container">
-        <!-- <article class="tweet">
-          <header>
-            <div class="user-info">
-              <img src="images/profile-hex.png" class="tweet-profile-pic">
-              <h3>User name</h3>
-            </div>
-            <h3>@Handle</h3>
-          </header>
-          
-          <body class="tweet-content">Hello world!</body>
-          <hr>
-          <footer>
-            <p>date</p>
-            <div>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article> -->
       </div>
       
     </main>
-    <!-- <a href="#tweet-text"> -->
-      <button id="scroll-top">
-        <i class="fa-solid fa-angles-up"></i>
-      </button>
-    <!-- </a> -->
+    <button id="scroll-top">
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
     <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
     <script src="scripts/composer.js"></script>

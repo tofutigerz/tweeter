@@ -4,49 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-// Test / driver code (temporary). Eventually will get this from the server.
-// const tweetData = {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//   "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//   "created_at": 1461116232227
-// };
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
-
 $(document).ready(function() {
-
-
-
+  //Creates a tweet element using template literal and text to prevent cross scripting
   const createTweetElement = (tweetData) => {
     const $tweet = $(`
       <article class="tweet">
@@ -72,11 +31,7 @@ $(document).ready(function() {
     return $tweet;
   
   };
-  // const $tweet = createTweetElement(tweetData);
-  
-  // // console.log($tweet); // to see what it looks like
-  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  
+  //Renders tweets in chronological order with recent being first and they are appended to the tweet-container
   const renderTweets = (tweets) => {
     $('#tweets-container').empty();
     tweets.forEach((tweetData)=> {
@@ -85,6 +40,7 @@ $(document).ready(function() {
     });
   };
   
+  //On loading the page, stored tweets are rendered.
   $.ajax({
     type: "GET",
     url: "/tweets",
@@ -92,48 +48,39 @@ $(document).ready(function() {
       renderTweets(tweets);
     }
   })
-  // renderTweets(data);
   
-  // $(function() {
-  //   const $button = $('#load-more-posts');
-  //   $button.on('click', function () {
-  //     console.log('Button clicked, performing ajax call...');
-  //     $.post('/tweets', { method: 'POST' })
-  //     .then(function (morePostsHtml) {
-  //       console.log('Success: ', morePostsHtml);
-  //       $button.replaceWith(morePostsHtml);
-  //     });
-  //   });
-  
-  // });
-  
+  //On clicking "tweet" button, error messages are shown if tweet is empty or over character limit, or else tweet is sent to database and tweets are rendered.
+
   $("#submit-tweet").submit(function(event) {
     event.preventDefault();
+
+    
+    //Storing variables
+    let $form = $(this);
+    let url = "/tweets";
+    const sendData = $form.serialize();
+    
+    //Error messages are hidden if shown before and shown if there is error
+
     $("#empty-tweet").slideUp();
     $("#long-tweet").slideUp();
-  
-    let $form = $(this);
-    let url = $form.attr("action");
-    const sendData = $form.serialize();
-    // alert(sendData);
     
     if (sendData.length === 5) {
-      // alert("You can't send an empty tweet!");
       $("#empty-tweet").slideDown();
       return;
     }
     if (sendData.length - 5 > 140) {
-      // alert("You have gone over the character limit!");
       $("#long-tweet").slideDown();
       return;
     } 
   
+    //Posts tweet and reseting tweet textbox and counter
+    //Then gets tweets from database and renders
     $.ajax({
       type: "POST",
       url: url,
       data: sendData,
       success: function() {
-        // alert(sendData);
         $("#tweet-text").val('');
         $(".counter").val(140);
       }
@@ -143,11 +90,11 @@ $(document).ready(function() {
         type: "GET",
         url: url,
         success: function(tweets) {
-          renderTweets(tweets);
+          return renderTweets(tweets);
         }
       })
     });
-  })
+  });
 
 
 
