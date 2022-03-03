@@ -26,7 +26,6 @@ article.tweet {
     font-size: 2vw;
   }
   .tweet-content {
-    // word-wrap: break-word;
     width: 100%;
   }
 }
@@ -69,7 +68,6 @@ article.tweet div.user-info {
   width: auto; 
   max-width: 100px; 
   max-height: 100px;
-  /* padding-right: 10px; */
 }
 
 article.tweet footer i:hover {
@@ -77,6 +75,5 @@ article.tweet footer i:hover {
 }
 
 article.tweet h3 {
-  // word-wrap: break-word;
   word-break: break-all;
 }

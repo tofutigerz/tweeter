@@ -1,8 +1,9 @@
 
 $(document).ready(function() {
+
+  //On scroll event, if window has scrolled more than 10% of viewport height, displays to top button and hides compose button
   const $scrollButton = $("#scroll-top");
   const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-  const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
   
   $(document).on("scroll", function() {
     if ($(window).scrollTop() > 0.10 * viewportHeight) {
@@ -10,37 +11,21 @@ $(document).ready(function() {
       $(".right-nav").hide();
     } else {
       $scrollButton.hide();
-      if (viewportWidth > 390) {
-        $(".right-nav").show();
-      }
+      $(".right-nav").show();
 
     }
   });
+  
+  //On clicking scroll top button, scrolls to the top
   const scrollTop = () => {
-    // const scrollHeight = document.body.scrollHeight;
-    // if (viewportWidth > 390 || scrollHeight < 2 * viewportHeight) {
-    //   $(window).scrollTop(0);
-    //   $("#tweet-text").focus();
-    // } else {
-    //   $(window).scrollTop(viewportHeight * 2);
-    //   $("#tweet-text").focus();
-    // }
     $(window).scrollTop(0);
   }
-
-  const compose = () => {
-    // $(window).scrollTop(0);
-    $("#tweet-text").focus();
-    // const scrollHeight = document.body.scrollHeight;
-    // if (viewportWidth > 390 || scrollHeight < 2 * viewportHeight) {
-    //   $(window).scrollTop(0);
-    //   $("#tweet-text").focus();
-    // } else {
-    //   $(window).scrollTop(viewportHeight * 2);
-    //   $("#tweet-text").focus();
-    // }
-  }
   $scrollButton.on("click", scrollTop);
+  
+  //On clicking create a tweet button in navbar, focuses on tweet textbox
+  const compose = () => {
+    $("#tweet-text").focus();
+  }
   $(".right-nav").on("click", compose);
 });
 
