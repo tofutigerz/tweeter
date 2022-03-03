@@ -2,21 +2,27 @@
 $(document).ready(function() {
   const $scrollButton = $("#scroll-top");
   const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  // alert(vw);
+  console.log("vh", vh);
   $(document).on("scroll", function() {
-    // console.log("this", $(window).scrollTop());
+    console.log("scroll", $(window).scrollTop());
     if ($(window).scrollTop() > 0.10 * vh) {
       // alert("you have scrolled");
       $scrollButton.show();
       $(".right-nav").hide();
     } else {
       $scrollButton.hide();
-      $(".right-nav").show();
+      if (vw > 390) {
+        $(".right-nav").show();
+      }
 
     }
   });
   const scrollTop = () => {
+    console.log("vh * 0.3", vh*0.3)
+    $(window).scrollTop(vh);
     $("#tweet-text").focus();
-    // $(window).scrollTop(70);
   }
   $scrollButton.on("click", scrollTop);
   $(".right-nav").on("click", scrollTop);
