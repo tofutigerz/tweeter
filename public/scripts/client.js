@@ -46,7 +46,7 @@
 $(document).ready(function() {
 
 
-  
+
   const createTweetElement = (tweetData) => {
     const $tweet = $(`
       <article class="tweet">
@@ -127,6 +127,7 @@ $(document).ready(function() {
       success: function() {
         // alert(sendData);
         $("#tweet-text").val('');
+        $(".counter").val(140);
       }
     })
     .then(() => {

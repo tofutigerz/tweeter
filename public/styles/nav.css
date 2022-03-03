@@ -10,7 +10,7 @@ nav {
   z-index: 2;
   font-size: 18px;
 }
-nav nav span {
+nav span {
   margin-left: 0.5em;
   margin-right: 0.5em;
   color: #FFFFFF;
@@ -70,7 +70,11 @@ nav a, nav a:hover, nav a:focus, nav a:active {
 }
 @media only screen and (min-width: 768px) {
   nav {
-    background-color: "Bungee", cursive;
+    background-color: #4056a1;
     font-size: 31px;
+  }
+  nav span {
+    margin-left: 0.5em;
+    margin-right: 1em;
   }
 }

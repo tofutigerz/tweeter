@@ -14,7 +14,7 @@ nav {
   z-index: 2;
   font-size: 18px;
   
-  nav span {
+  span {
     margin-left: 0.5em;
     margin-right: 0.5em;
     color: #FFFFFF;
@@ -66,6 +66,7 @@ nav {
 @media only screen and (max-width: 390px) {
   nav {
     justify-content: center;
+
   }
   .right-nav {
     display: none;
@@ -81,7 +82,12 @@ nav {
 
 @media only screen and (min-width: 768px) {
   nav {
-    background-color: $logo-font;
+    background-color: $primary-color;
     font-size: 31px;
+
+    span {
+      margin-left: 0.5em;
+      margin-right: 1em;
+    }
   }
 }
