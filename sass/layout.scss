@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,16 +13,19 @@ html {
 /*
  * Global layout stuff
  */
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
-}
+ 
+ body {
+   color: #545149;
+   background-color: #f4f1ec;
+   font-size: 24px;
+   font-family: 'Source Sans Pro', sans-serif;
+  }
+  
 
-/*
-* Additional CSS can be defined below or in other CSS files, as per instructions
-*/
+  /*
+  * Additional CSS can be defined below or in other CSS files, as per instructions
+  */
+  
 main {
   background-color: #f4f1ec;
   width: 90%;
@@ -63,8 +65,8 @@ main {
     display: flex;
     flex-direction: row;
   }
-
   main {
     padding-top: 120px;
   }
+
 }

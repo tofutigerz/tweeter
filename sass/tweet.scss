@@ -1,7 +1,6 @@
 #tweets-container {
   width: 100%;
 }
-
 article.tweet {
   display: flex;
   flex-direction: column;
@@ -18,19 +17,21 @@ article.tweet {
     font-size: 4vw;
   }
 }
+
 @media only screen and (min-width: 768px) {
   article.tweet {
     font-size: 2vw;
   }
 }
+
 .tweet-content {
   word-wrap: break-word;
 }
 
-article.tweet:hover {
-  box-shadow: 5px 5px #636866;
-}
 
+article.tweet:hover {
+  box-shadow: 5px 5px rgb(99, 104, 102)
+}
 article.tweet header {
   display: flex;
   justify-content: space-between;
@@ -56,13 +57,13 @@ article.tweet div.user-info {
 }
 
 .tweet-profile-pic {
-  height: auto;
-  width: auto;
-  max-width: 100px;
+  height: auto; 
+  width: auto; 
+  max-width: 100px; 
   max-height: 100px;
   /* padding-right: 10px; */
 }
 
 article.tweet footer i:hover {
-  color: #f1bb69;
+  color: rgb(241, 187, 105);
 }
