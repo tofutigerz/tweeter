@@ -1,3 +1,6 @@
+@import "variables";
+
+
 #tweets-container {
   width: 100%;
 }
@@ -74,5 +77,6 @@ article.tweet footer i:hover {
 }
 
 article.tweet h3 {
-  word-wrap: break-word;
+  // word-wrap: break-word;
+  word-break: break-all;
 }

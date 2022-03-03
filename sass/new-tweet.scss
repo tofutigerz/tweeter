@@ -1,6 +1,6 @@
-$primary-background-color: #f4f1ec;
-$logo-font: 'Bungee', cursive;
-$primary-color: #4056a1;
+
+@import "variables";
+
 
 #tweet-text {
   background-color: $primary-background-color;
