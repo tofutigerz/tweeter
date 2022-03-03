@@ -78,6 +78,7 @@ $(document).ready(function() {
   // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   
   const renderTweets = (tweets) => {
+    $('#tweets-container').empty();
     tweets.forEach((tweetData)=> {
       const $tweet = createTweetElement(tweetData);
       $('#tweets-container').prepend($tweet);
@@ -135,7 +136,7 @@ $(document).ready(function() {
         type: "GET",
         url: url,
         success: function(tweets) {
-          renderTweets(tweets.slice(-1));
+          renderTweets(tweets);
         }
       })
     });
