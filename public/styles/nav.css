@@ -38,6 +38,11 @@ nav span {
   color: black;
 }
 
+.right-nav:hover {
+  /* color: black; */
+  cursor: pointer; 
+}
+
 .right-nav {
   font-family: sans-serif;
   font-size: 1em;

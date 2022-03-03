@@ -52,6 +52,7 @@ main {
   height: 12vmin;
   width: 12vmin;
   font-size: 6vmin;
+  display: none;
 }
 
 #scroll-top:hover {

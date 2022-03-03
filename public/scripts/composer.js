@@ -1,13 +1,17 @@
 
 $(document).ready(function() {
   const $scrollButton = $("#scroll-top");
+  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
   $(document).on("scroll", function() {
-    console.log("this", $(window).scrollTop());
-    if ($(window).scrollTop() > 100) {
+    // console.log("this", $(window).scrollTop());
+    if ($(window).scrollTop() > 0.10 * vh) {
       // alert("you have scrolled");
       $scrollButton.show();
+      $(".right-nav").hide();
     } else {
       $scrollButton.hide();
+      $(".right-nav").show();
+
     }
   });
   const scrollTop = () => {
@@ -15,7 +19,7 @@ $(document).ready(function() {
     // $(window).scrollTop(70);
   }
   $scrollButton.on("click", scrollTop);
-
+  $(".right-nav").on("click", scrollTop);
 });
 
 //Get the button:
